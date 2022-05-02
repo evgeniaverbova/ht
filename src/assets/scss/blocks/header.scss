@@ -1,0 +1,52 @@
+header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    border-bottom: 2px dotted $yellow;
+    padding: 20px 0px 35px 0px;
+}
+
+.header_list {
+    padding: 0 0 0 295px;
+    display: flex;
+}
+
+.header_right {
+    margin: auto 0;
+}
+
+.header_left {
+    padding-right: 280px;
+}
+
+.header_menu {
+    display: flex;
+    padding: 20px 0px 10px 0px;
+}
+
+.menu_li {
+    color: #ffffff;
+    font-family: "Museo";
+    font-size: 17px;
+    font-weight: 300;
+    text-transform: uppercase;
+    &--pd {
+        padding-right: 24px;
+    }
+     a { 
+         color: inherit;
+         font-family: inherit;
+     }
+
+     span {
+       color: $orange;  
+       padding: 0 15px;
+     }
+}
+
+
+
+
+

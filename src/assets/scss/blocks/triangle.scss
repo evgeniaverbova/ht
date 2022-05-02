@@ -1,0 +1,53 @@
+.triangle1 {
+    display: block;
+    height: 357px;
+    max-width: 336px;
+    z-index: 1;
+    position: relative;
+}
+
+.triangle2 {
+    z-index: 2;
+    position: absolute;
+    top: 175px;
+    left: 55px;
+}
+
+.triangle3 {
+    transform: rotate(-42deg);
+    display: block;
+    width: 150px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    right: -210px;
+}
+
+.triangle4 {
+    display: block;
+    width: 320px;
+    height: 900px;
+    position: absolute;
+    top: 215px;
+    right: 0; 
+}
+
+.triangle5 {
+    display: block;
+    width: 475px;
+    height: 555px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+    
+.triangle6 {
+    display: block;
+    width: 300px;
+    width: 45px;
+    height: 546px;
+    position: absolute;
+    left: 0;
+    bottom: 335px;
+    z-index: 2;
+}

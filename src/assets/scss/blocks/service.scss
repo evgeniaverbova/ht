@@ -1,0 +1,74 @@
+.services {
+    display: flex;
+    // justify-content: center ;
+    flex-wrap: wrap;
+    width: 1200px;
+    position: relative;
+    bottom: -450px;
+    left: 1%;
+    z-index: 4;
+
+}
+
+.service_iteam {
+    display: flex;
+    max-width: 524px;
+    height: 266px;
+    color: $black;
+    margin: 0 40px 26px 0;
+    background: url(/assets/images/services/Servies1.png) center/cover no-repeat;
+
+
+
+        &--black {
+            background: url(/assets/images/services/Servies2.png) center/cover no-repeat;
+            color: $white;
+        }
+}
+
+.service_info{
+    font-family: "Museo";
+    text-align: left;
+    padding: 35px 0 40px 37px;
+}
+
+.service_title {
+    width: 262px;
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.service_text {
+    max-width: 200px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
+    padding: 35px 0;
+}
+
+.service_button {
+    display: flex;
+        
+        a {
+            color: #f8de01;
+            font-family: "Museo";
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        &--black {
+
+            a {
+            color: $black;
+            }
+        }
+}
+
+.service_img img {
+    display: block;
+    height: 100%;
+    max-width: 228px;
+ 
+}
