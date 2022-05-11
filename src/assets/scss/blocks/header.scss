@@ -5,11 +5,10 @@ header {
     left: 0;
     z-index: 5;
     border-bottom: 2px dotted $yellow;
-    padding: 20px 0px 35px 0px;
 }
 
 .header_list {
-    padding: 0 0 0 295px;
+    padding: 0 0 0 293px;
     display: flex;
 }
 
@@ -18,31 +17,35 @@ header {
 }
 
 .header_left {
-    padding-right: 280px;
+    padding: 15px 283px 49px 0;
 }
 
 .header_menu {
     display: flex;
-    padding: 20px 0px 10px 0px;
+    padding: 6px 0 10px 0;
 }
 
 .menu_li {
-    color: #ffffff;
+    color: $white;
     font-family: "Museo";
     font-size: 17px;
     font-weight: 300;
     text-transform: uppercase;
+
     &--pd {
-        padding-right: 24px;
+        padding-right: 33px;
     }
+
      a { 
-         color: inherit;
-         font-family: inherit;
+        color: inherit;
+        font-family: inherit;
      }
 
      span {
-       color: $orange;  
-       padding: 0 15px;
+        font-size: 16px;
+        color: $orange; 
+        font-weight: 700; 
+        padding: 0 15px 0 12px;
      }
 }
 

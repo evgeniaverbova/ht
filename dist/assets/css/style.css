@@ -66,6 +66,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
+    overflow-x: hidden;
 }
 
 ol, ul {
@@ -373,6 +374,10 @@ img {
     vertical-align: middle;
 }
 
+a {
+    text-decoration: none;
+}
+
 fieldset {
     border: 0;
     margin: 0;
@@ -392,42 +397,61 @@ textarea {
 
 .wrapper {
     width: 100%;
-    height: 1520px;
     background-color: #222222;
     position: relative;
-    overflow: hidden;
 }
 
-.wrapper:after {
+.wrapper::after {
     content: "";
     display: block;
-    height: 300px;
+    height: 501px;
     width: 107%;
     background-color: #dde6e8;
-    position: absolute;
-    bottom: -80px;
+    position: relative;
+    top: -130px;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
 }
 
-a {
-    text-decoration: none;
+.page--one {
+    padding-top: 97px;
+    z-index: 3;
 }
 
-.page {
-    padding: 0px 400px 0 240px;
+.page--two {
+    position: relative;
+    padding-top: 6px;
+    top: -400px;
+    background-color: #dde6e8;
+    z-index: 5;
+}
+
+.page--three {
+    display: block;
+    height: 501px;
+    width: 107%;
+    background-color: #ffffff;
+    position: relative;
+    bottom: 559px;
+    left: -46px;
+    z-index: 6;
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
 }
 
 .main {
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
-    top: 190px;
-    z-index: 3;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     color: #ffffff;
     font-family: "Museo";
+    margin-bottom: 98px;
+    padding-left: 10px;
 }
 
 .main_title {
@@ -437,9 +461,9 @@ a {
     font-style: italic;
     line-height: 0.9;
     text-align: left;
-    letter-spacing: -0.5px;
+    letter-spacing: -2.3px;
     text-transform: uppercase;
-    padding: 60px 40px 30px 10px;
+    padding: 65px 40px 32px 8px;
 }
 
 .main_text {
@@ -448,7 +472,7 @@ a {
     text-align: left;
     font-weight: 300;
     line-height: 1.2;
-    padding-left: 5px;
+    padding-left: 2px;
 }
 
 .main_button {
@@ -458,10 +482,10 @@ a {
     align-items: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin: 46px 0px 0px 25px;
+    margin: 46px 0 0 22px;
     border: 1px #f8e401 solid;
     max-width: 160px;
-    height: 54px;
+    height: 52px;
     -webkit-transform: skew(-35deg);
     transform: skew(-35deg);
 }
@@ -478,24 +502,24 @@ a {
 
 .main_img {
     position: relative;
+    left: -6px;
+    z-index: 2;
 }
 
 .main_img::after {
     content: url(/assets/images/cycle_sahodow.png);
     position: absolute;
     top: 0;
-    left: 30px;
-    z-index: 2;
+    left: 40px;
 }
 
 .pagination_ul {
-    position: relative;
-    top: 350px;
-    left: 160px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
     justify-content: center;
+    padding-left: 11%;
+    margin-bottom: 100px;
 }
 
 .pagination_ul li {
@@ -503,7 +527,7 @@ a {
     width: 13px;
     height: 10px;
     background-color: #ffae00;
-    margin-right: 15px;
+    margin-right: 16px;
     -webkit-transform: skew(-35deg);
     transform: skew(-35deg);
     cursor: pointer;
@@ -517,57 +541,78 @@ a {
 
 .triangle1 {
     display: block;
-    height: 357px;
-    max-width: 336px;
-    z-index: 1;
-    position: relative;
+    width: 0;
+    height: 0;
+    border-top: 270px solid #ffae00;
+    border-right: 269px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.triangle2 {
-    z-index: 2;
+.triangle1::after {
+    content: "";
+    display: block;
     position: absolute;
-    top: 175px;
-    left: 55px;
+    width: 0;
+    height: 0;
+    border-top: 75px solid #f8e401;
+    border-right: 75px solid transparent;
+    bottom: 23px;
+    left: 57px;
+    z-index: 2;
 }
 
 .triangle3 {
-    -webkit-transform: rotate(-42deg);
-    transform: rotate(-42deg);
     display: block;
-    width: 150px;
-    height: 400px;
     position: absolute;
-    top: 0;
-    right: -210px;
-}
-
-.triangle4 {
-    display: block;
-    width: 320px;
-    height: 900px;
-    position: absolute;
-    top: 215px;
+    top: 45px;
     right: 0;
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-right: 57px solid #f8e401;
+    border-bottom: 60px solid transparent;
 }
 
-.triangle5 {
+.triangle3::after {
+    content: "";
     display: block;
-    width: 475px;
-    height: 555px;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    top: 201px;
+    right: -55px;
+    width: 0;
+    height: 0;
+    border-top: 354px solid transparent;
+    border-right: 322px solid #ffae00;
+    border-bottom: 362px solid transparent;
 }
 
 .triangle6 {
     display: block;
-    width: 300px;
-    width: 45px;
-    height: 546px;
-    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 46px solid transparent;
+    border-left: 44px solid #f8e401;
+    border-bottom: 40px solid transparent;
+    position: relative;
+    top: 54em;
     left: 0;
-    bottom: 335px;
-    z-index: 2;
+}
+
+.triangle6::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 422px solid #ffae00;
+    border-right: 373px solid transparent;
+    position: absolute;
+    left: -43px;
+    top: 28px;
+    z-index: 3;
+    -webkit-transform: skewY(-7deg);
+    transform: skewY(-7deg);
 }
 
 header {
@@ -577,11 +622,10 @@ header {
     left: 0;
     z-index: 5;
     border-bottom: 2px dotted #f8e401;
-    padding: 20px 0px 35px 0px;
 }
 
 .header_list {
-    padding: 0 0 0 295px;
+    padding: 0 0 0 293px;
     display: -ms-flexbox;
     display: flex;
 }
@@ -591,13 +635,13 @@ header {
 }
 
 .header_left {
-    padding-right: 280px;
+    padding: 15px 283px 49px 0;
 }
 
 .header_menu {
     display: -ms-flexbox;
     display: flex;
-    padding: 20px 0px 10px 0px;
+    padding: 6px 0 10px 0;
 }
 
 .menu_li {
@@ -609,7 +653,7 @@ header {
 }
 
 .menu_li--pd {
-    padding-right: 24px;
+    padding-right: 33px;
 }
 
 .menu_li a {
@@ -618,8 +662,10 @@ header {
 }
 
 .menu_li span {
+    font-size: 16px;
     color: #ffae00;
-    padding: 0 15px;
+    font-weight: 700;
+    padding: 0 15px 0 12px;
 }
 
 .services {
@@ -627,11 +673,13 @@ header {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    width: 1200px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: auto;
+    z-index: 7;
     position: relative;
-    bottom: -450px;
-    left: 1%;
-    z-index: 4;
+    overflow: hidden;
+    padding: 0 0 0 12%;
 }
 
 .service_iteam {
@@ -639,35 +687,37 @@ header {
     display: flex;
     max-width: 524px;
     color: #000000;
-    margin: 0 40px 26px 0;
-    background: url(/assets/images/services/Servies1.png) center/cover no-repeat;
+    margin: 0 40px 36px 0;
+    background-color: #f8de01;
 }
 
 .service_iteam--black {
-    background: url(/assets/images/services/Servies2.png) center/cover no-repeat;
+    background-color: #000000;
     color: #ffffff;
 }
 
 .service_info {
     font-family: "Museo";
     text-align: left;
-    padding: 40px 0 33px 40px;
+    padding: 36px 0 18px 41px;
+    min-width: 277px;
+    z-index: 3;
 }
 
 .service_title {
-    width: 262px;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
-    line-height: 1.2;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
 }
 
 .service_text {
     max-width: 200px;
     font-size: 16px;
     font-weight: 300;
-    text-align: left;
-    padding: 35px 0;
+    padding: 26px 0 27px 0;
+    line-height: 1.2;
 }
 
 .service_button {
@@ -679,10 +729,151 @@ header {
     color: #f8de01;
     font-family: "Museo";
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 700;
+}
+
+.service_button--black a {
+    color: #000000;
 }
 
 .service_img {
     position: relative;
-    bottom: 0;
+    right: 77px;
+}
+
+.service_img img {
+    display: block;
+    height: 266px;
+    width: 285px;
+}
+
+.products {
+    width: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.products_info {
+    color: #000000;
+    font-family: "Museo";
+    padding: 0px 191px 82px 297px;
+}
+
+.produts_title {
+    font-size: 41px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding-bottom: 35px;
+}
+
+.produts_subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 34px;
+}
+
+.produts_subtitle span {
+    text-align: center;
+    color: red;
+}
+
+.products_showcase {
+    padding-bottom: 300px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 150px;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.showcase_iteam {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    width: 349px;
+    height: 315px;
+    background-color: #ffffff;
+    margin-right: 20px;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.showcase_iteam::after {
+    content: "";
+    position: relative;
+    top: -5px;
+    left: 12px;
+    display: block;
+    width: 325px;
+    height: 248px;
+    background-color: #dde6e8;
+}
+
+.showcase_image {
+    display: block;
+    max-width: 325px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 44px;
+    margin: auto;
+    z-index: 5;
+}
+
+.showcase_info {
+    padding: 17px 19px 15px 26px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    color: #000000;
+    font-family: "Museo";
+    font-size: 18px;
+}
+
+.showcase_info h2 {
+    font-weight: 300;
+}
+
+.showcase_info h3 {
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+.mainfeature {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    padding-top: 127px;
+    color: #000000;
+    font-family: "Museo";
+}
+
+.mainfeature_title {
+    max-width: 367px;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.mainfeature_text {
+    width: 498px;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: left;
 }

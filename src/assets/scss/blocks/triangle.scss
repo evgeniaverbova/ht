@@ -1,53 +1,77 @@
 .triangle1 {
     display: block;
-    height: 357px;
-    max-width: 336px;
-    z-index: 1;
-    position: relative;
-}
-
-.triangle2 {
-    z-index: 2;
+    width: 0;
+	height: 0;
+	border-top: 270px solid  $orange; 
+	border-right: 269px solid transparent;	
     position: absolute;
-    top: 175px;
-    left: 55px;
+     top: 0;
+     left: 0;
+
+        &::after  { 
+            content: '';
+            display: block;
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 75px solid $yellow; 
+            border-right: 75px solid transparent;
+            bottom: 23px;
+            left: 57px;	
+            z-index: 2;
+     }
+
 }
 
 .triangle3 {
-    transform: rotate(-42deg);
     display: block;
-    width: 150px;
-    height: 400px;
     position: absolute;
-    top: 0;
-    right: -210px;
+   top: 45px;
+    right: 0;
+	width: 0;
+	height: 0;
+	border-top: 60px solid transparent;
+	border-right: 57px solid $yellow;
+	border-bottom: 60px solid transparent;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 201px;
+            right: -55px;
+            width: 0;
+            height: 0;
+            border-top: 354px solid transparent;
+            border-right: 322px solid $orange;
+            border-bottom: 362px solid transparent;
+        }
 }
 
-.triangle4 {
-    display: block;
-    width: 320px;
-    height: 900px;
-    position: absolute;
-    top: 215px;
-    right: 0; 
-}
 
-.triangle5 {
-    display: block;
-    width: 475px;
-    height: 555px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
     
 .triangle6 {
     display: block;
-    width: 300px;
-    width: 45px;
-    height: 546px;
-    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 46px solid transparent;
+    border-left: 44px solid $yellow;
+    border-bottom: 40px solid transparent;
+    position: relative;
+    top: 54em;
     left: 0;
-    bottom: 335px;
-    z-index: 2;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-bottom: 422px solid $orange; 
+            border-right: 373px solid transparent;
+            position: absolute;
+            left: -43px;
+            top: 28px;
+            z-index: 3;
+            transform: skewY(-7deg);
+        }
 }
