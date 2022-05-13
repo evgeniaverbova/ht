@@ -66,6 +66,8 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -399,6 +401,7 @@ textarea {
     width: 100%;
     background-color: #222222;
     position: relative;
+    overflow-x: hidden;
 }
 
 .wrapper::after {
@@ -430,15 +433,27 @@ textarea {
 
 .page--three {
     display: block;
-    height: 501px;
     width: 107%;
     background-color: #ffffff;
     position: relative;
-    bottom: 559px;
-    left: -46px;
+    bottom: 553px;
+    left: -103px;
     z-index: 6;
     -webkit-transform: rotate(7deg);
     transform: rotate(7deg);
+    padding: 0 250px;
+}
+
+.page--four {
+    display: block;
+    width: 107%;
+    background-color: #ffae00;
+    position: relative;
+    bottom: 6px;
+    left: -46px;
+    z-index: 7;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
 }
 
 .main {
@@ -488,6 +503,7 @@ textarea {
     height: 52px;
     -webkit-transform: skew(-35deg);
     transform: skew(-35deg);
+    transition: 1s;
 }
 
 .main_button a {
@@ -498,6 +514,15 @@ textarea {
     text-align: center;
     -webkit-transform: skew(35deg);
     transform: skew(35deg);
+}
+
+.main_button:hover {
+    background-color: #f8e401;
+    border: 2px solid #9cf801;
+}
+
+.main_button:hover a {
+    color: #ffffff;
 }
 
 .main_img {
@@ -605,7 +630,7 @@ textarea {
     display: block;
     width: 0;
     height: 0;
-    border-bottom: 422px solid #ffae00;
+    border-bottom: 427px solid #ffae00;
     border-right: 373px solid transparent;
     position: absolute;
     left: -43px;
@@ -760,7 +785,7 @@ header {
 .products_info {
     color: #000000;
     font-family: "Museo";
-    padding: 0px 191px 82px 297px;
+    padding: 0px 191px 78px 293px;
 }
 
 .produts_title {
@@ -769,18 +794,15 @@ header {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 0.8px;
-    padding-bottom: 35px;
+    padding: 0 4px 35px 0;
 }
 
 .produts_subtitle {
+    text-align: center;
     font-size: 16px;
     font-weight: 300;
-    padding-left: 34px;
-}
-
-.produts_subtitle span {
-    text-align: center;
-    color: red;
+    padding-left: 31px;
+    line-height: 18px;
 }
 
 .products_showcase {
@@ -810,11 +832,11 @@ header {
 .showcase_iteam::after {
     content: "";
     position: relative;
-    top: -5px;
-    left: 12px;
+    top: -2px;
+    left: 13px;
     display: block;
     width: 325px;
-    height: 248px;
+    height: 251px;
     background-color: #dde6e8;
 }
 
@@ -853,27 +875,109 @@ header {
 .mainfeature {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
-    padding-top: 127px;
+    padding-top: 80px;
     color: #000000;
     font-family: "Museo";
 }
 
+.mainfeature--second {
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    padding: 30px 0 250px 0;
+}
+
 .mainfeature_title {
-    max-width: 367px;
+    max-width: 374px;
     font-size: 42px;
     font-weight: 700;
-    line-height: 36px;
+    letter-spacing: 0.3px;
     text-align: left;
     text-transform: uppercase;
+    padding-bottom: 48px;
+}
+
+.mainfeature_title--second {
+    padding-left: 3px;
+    color: #ffffff;
+}
+
+.mainfeature_info {
+    position: relative;
+    top: 0;
+    left: 62px;
+}
+
+.mainfeature_info--second {
+    left: 49px;
 }
 
 .mainfeature_text {
     width: 498px;
     font-size: 16px;
+    line-height: 19px;
     font-weight: 300;
     text-align: left;
+    padding-left: 11px;
+    padding-bottom: 56px;
+}
+
+.mainfeature_image {
+    position: relative;
+    bottom: 165px;
+    right: 188px;
+    z-index: 2;
+}
+
+.mainfeature_image--second {
+    bottom: 51px;
+    right: 58px;
+}
+
+.mainfeature_button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transform: skew(-35deg);
+    transform: skew(-35deg);
+    max-width: 131px;
+    height: 52px;
+    border: 1px solid #212121;
+    margin-left: 22px;
+    transition: 1s;
+}
+
+.mainfeature_button a {
+    color: #000000;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 20px;
+    padding-right: 10px;
+    -webkit-transform: skew(35deg);
+    transform: skew(35deg);
+}
+
+.mainfeature_button:hover {
+    background-color: #212121;
+    border: 2px solid #dde6e8;
+}
+
+.mainfeature_button:hover a {
+    color: #dde6e8;
+}
+
+.mainfeature_button--second {
+    margin-left: 29px;
 }
