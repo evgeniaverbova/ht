@@ -9,6 +9,11 @@
     overflow: hidden;
     padding: 0 0 0 12%;
 
+        @include breakpoint($tablet-bp) {
+            padding: 0 0;
+          
+        }
+
 }
 
 .service_iteam {
@@ -24,7 +29,7 @@
         }
 }
 
-.service_info{
+.service_info {
     font-family: "Museo";
     text-align: left;
     padding: 36px 0 18px 41px;
@@ -38,6 +43,8 @@
     text-transform: uppercase;
     line-height: 1.4;
     letter-spacing: 0.5px;
+
+
 
 }
 

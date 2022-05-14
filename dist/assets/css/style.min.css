@@ -434,19 +434,38 @@ textarea {
   background-color: #ffffff;
   position: relative;
   bottom: 570px;
-  left: -46px;
+  left: -76px;
   z-index: 6;
   transform: rotate(7deg);
 }
-.page--four {
+@media screen and (max-width: 1300px) {
+  .page--three {
+    left: -86px;
+  }
+}
+.page--three::after {
+  content: "";
   display: block;
-  width: 107%;
+  height: 300px;
+  width: 110%;
   background-color: #ffae00;
   position: relative;
-  bottom: 621px;
-  left: -46px;
+  top: -59px;
+  left: 15px;
+  z-index: 3;
+  transform: rotate(-14deg);
+}
+@media screen and (max-width: 1300px) {
+  .page--three::after {
+    top: 50px;
+  }
+}
+.page--four {
+  background-color: #ffae00;
+  position: relative;
+  bottom: 719px;
+  left: 0;
   z-index: 7;
-  transform: rotate(-7deg);
 }
 
 .main {
@@ -457,6 +476,19 @@ textarea {
   font-family: "Museo";
   margin-bottom: 98px;
   padding-left: 10px;
+  position: relative;
+  z-index: 4;
+}
+@media screen and (max-width: 950px) {
+  .main {
+    padding-top: 130px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .main_info {
+    margin-bottom: 50px;
+  }
 }
 
 .main_title {
@@ -470,6 +502,11 @@ textarea {
   text-transform: uppercase;
   padding: 65px 40px 32px 8px;
 }
+@media screen and (max-width: 1300px) {
+  .main_title {
+    max-width: 350px;
+  }
+}
 
 .main_text {
   max-width: 443px;
@@ -478,6 +515,11 @@ textarea {
   font-weight: 300;
   line-height: 1.2;
   padding-left: 2px;
+}
+@media screen and (max-width: 1300px) {
+  .main_text {
+    max-width: 350px;
+  }
 }
 
 .main_button {
@@ -512,11 +554,30 @@ textarea {
   left: -6px;
   z-index: 2;
 }
-.main_img::after {
-  content: url(/assets/images/cycle_sahodow.png);
+.main_img img {
+  display: block;
+}
+@media screen and (max-width: 1300px) {
+  .main_img img {
+    max-width: 350px;
+    max-height: 375px;
+  }
+}
+
+.shadow {
+  display: block;
   position: absolute;
   top: 0;
   left: 40px;
+}
+.shadow img {
+  display: block;
+}
+@media screen and (max-width: 1300px) {
+  .shadow img {
+    max-width: 350px;
+    max-height: 375px;
+  }
 }
 
 .pagination_ul {
@@ -611,6 +672,11 @@ textarea {
   z-index: 3;
   transform: skewY(-7deg);
 }
+@media screen and (max-width: 1300px) {
+  .triangle6 {
+    top: 94em;
+  }
+}
 
 header {
   width: 100%;
@@ -622,21 +688,51 @@ header {
 }
 
 .header_list {
-  padding: 0 0 0 293px;
+  padding: 0 0 0 20%;
   display: flex;
+}
+@media screen and (max-width: 1300px) {
+  .header_list {
+    padding: 0 0 0 5%;
+  }
+}
+@media screen and (max-width: 950px) {
+  .header_list {
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
 }
 
 .header_right {
   margin: auto 0;
+  padding-left: 8px;
 }
 
 .header_left {
-  padding: 15px 283px 49px 0;
+  padding: 15px 24% 49px 5px;
+}
+@media screen and (max-width: 1300px) {
+  .header_left {
+    padding: 15px 10% 49px 5px;
+  }
 }
 
 .header_menu {
   display: flex;
   padding: 6px 0 10px 0;
+}
+@media screen and (max-width: 950px) {
+  .header_menu--mobile {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 104px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(221, 230, 232, 0.2);
+    padding: 6px 0 0 0;
+  }
 }
 
 .menu_li {
@@ -649,6 +745,11 @@ header {
 .menu_li--pd {
   padding-right: 33px;
 }
+@media screen and (max-width: 950px) {
+  .menu_li--pd {
+    padding-right: 0;
+  }
+}
 .menu_li a {
   color: inherit;
   font-family: inherit;
@@ -658,6 +759,57 @@ header {
   color: #ffae00;
   font-weight: 700;
   padding: 0 15px 0 12px;
+}
+@media screen and (max-width: 950px) {
+  .menu_li span {
+    display: none;
+  }
+}
+@media screen and (max-width: 950px) {
+  .menu_li {
+    padding-bottom: 15px;
+  }
+  .menu_li:hover {
+    background-color: rgba(221, 230, 232, 0.5);
+  }
+}
+
+.header__burger {
+  display: none;
+}
+@media screen and (max-width: 950px) {
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 30px;
+    align-self: center;
+    margin-right: 30px;
+    margin-bottom: 29px;
+  }
+  .header__burger::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+  }
+  .header__burger::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+  }
+  .header__burger span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    top: 13px;
+  }
 }
 
 .services {
@@ -669,6 +821,11 @@ header {
   position: relative;
   overflow: hidden;
   padding: 0 0 0 12%;
+}
+@media screen and (max-width: 1300px) {
+  .services {
+    padding: 0 0;
+  }
 }
 
 .service_iteam {
@@ -741,23 +898,33 @@ header {
   color: #000000;
   font-family: "Museo";
   padding: 0px 191px 78px 293px;
+  text-align: center;
+}
+@media screen and (max-width: 950px) {
+  .products_info {
+    max-width: 890px;
+    padding: 100px 0;
+  }
 }
 
 .produts_title {
   font-size: 41px;
   font-weight: 700;
-  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   padding: 0 4px 35px 0;
 }
 
 .produts_subtitle {
-  text-align: center;
   font-size: 16px;
   font-weight: 300;
   padding-left: 31px;
   line-height: 18px;
+}
+@media screen and (max-width: 1300px) {
+  .produts_subtitle {
+    padding-left: 0;
+  }
 }
 
 .products_showcase {
@@ -766,6 +933,11 @@ header {
   flex-wrap: wrap;
   padding-left: 150px;
   justify-content: center;
+}
+@media screen and (max-width: 1300px) {
+  .products_showcase {
+    padding-left: 10px;
+  }
 }
 
 .showcase_iteam {
@@ -819,17 +991,12 @@ header {
 
 .mainfeature {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   transform: rotate(-7deg);
   padding-top: 97px;
   color: #000000;
   font-family: "Museo";
-}
-.mainfeature--second {
-  align-items: center;
-  transform: rotate(7deg);
-  flex-direction: row-reverse;
-  padding: 30px 0 250px 0;
 }
 
 .mainfeature_title {
@@ -839,23 +1006,27 @@ header {
   letter-spacing: 0.3px;
   text-align: left;
   text-transform: uppercase;
-  padding-bottom: 48px;
-}
-.mainfeature_title--second {
-  padding-left: 3px;
-  color: #ffffff;
+  padding-bottom: 47px;
 }
 
 .mainfeature_info {
   position: relative;
   top: 0;
-  left: 185px;
+  left: 196px;
 }
-.mainfeature_info--second {
-  left: 49px;
+@media screen and (max-width: 1300px) {
+  .mainfeature_info {
+    left: 85px;
+  }
+}
+@media screen and (max-width: 950px) {
+  .mainfeature_info {
+    left: 15px;
+  }
 }
 
-.mainfeature_text {
+.mainfeature_text,
+.secondfeature_text {
   width: 498px;
   font-size: 16px;
   line-height: 19px;
@@ -868,15 +1039,27 @@ header {
 .mainfeature_image {
   position: relative;
   bottom: 165px;
-  right: 64px;
+  right: 54px;
   z-index: 2;
 }
-.mainfeature_image--second {
-  bottom: 51px;
-  right: 58px;
+@media screen and (max-width: 1300px) {
+  .mainfeature_image {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 950px) {
+  .mainfeature_image {
+    right: 15px;
+  }
+  .mainfeature_image img {
+    display: block;
+    max-width: 600px;
+    max-height: 650px;
+  }
 }
 
-.mainfeature_button {
+.mainfeature_button,
+.secondfeature_button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -887,7 +1070,8 @@ header {
   margin-left: 22px;
   transition: 1s;
 }
-.mainfeature_button a {
+.mainfeature_button a,
+.secondfeature_button a {
   color: #000000;
   font-family: inherit;
   font-weight: 700;
@@ -895,13 +1079,59 @@ header {
   padding-right: 10px;
   transform: skew(35deg);
 }
-.mainfeature_button:hover {
+.mainfeature_button:hover,
+.secondfeature_button:hover {
   background-color: #212121;
   border: 2px solid #dde6e8;
 }
-.mainfeature_button:hover a {
+.mainfeature_button:hover a,
+.secondfeature_button:hover a {
   color: #dde6e8;
 }
-.mainfeature_button--second {
-  margin-left: 29px;
+
+.secondfeature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row-reverse;
+  padding: 0 80px;
+  font-family: "Museo";
+}
+
+.secondfeature_image {
+  position: relative;
+  top: -224px;
+  margin-right: 110px;
+}
+@media screen and (max-width: 950px) {
+  .secondfeature_image img {
+    display: block;
+    max-width: 500px;
+    max-height: 550px;
+  }
+}
+
+.secondfeature_title {
+  max-width: 374px;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 0 0 48px 3px;
+}
+
+.secondfeature_info {
+  position: relative;
+  top: -55px;
+}
+@media screen and (max-width: 1300px) {
+  .secondfeature_info {
+    padding: 100px 0 200px 0;
+  }
+}
+
+.secondfeature_button {
+  margin-left: 28px;
 }

@@ -74,4 +74,7 @@
             z-index: 3;
             transform: skewY(-7deg);
         }
+        @include breakpoint($tablet-bp) {
+            top: 94em;
+        }
 }

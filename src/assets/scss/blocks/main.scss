@@ -42,21 +42,40 @@
             background-color: $white;
             position: relative;
             bottom: 570px;
-            left: -46px;
+            left: -76px;
             z-index: 6;
             transform: rotate(7deg);
+
+                @include breakpoint($tablet-bp) {
+                    left: -86px;
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    height: 300px;
+                    width: 110%;
+                    background-color: $orange;
+                    position: relative;
+                    top: -59px;
+                    left: 15px;
+                    z-index: 3;
+                    transform: rotate(-14deg);
+        
+                    @include breakpoint($tablet-bp) {
+                        top: 50px;
+                    }
+                }
 
         }
 
         &--four {
-            display: block;
-            width: 107%;
             background-color: $orange;
             position: relative;
-            bottom: 621px;
-            left: -46px;
+            bottom: 719px;
+            left: 0;
             z-index: 7;
-            transform: rotate(-7deg);
+
 
         }
 
@@ -72,6 +91,17 @@
     font-family: "Museo";
     margin-bottom: 98px;
     padding-left: 10px;
+    position: relative;
+    z-index: 4;
+        @include breakpoint($second-bp) {
+            padding-top: 130px;
+        }
+}
+
+.main_info {
+    @include breakpoint($tablet-bp) {
+        margin-bottom: 50px;
+    }
 }
 
 .main_title{
@@ -84,6 +114,10 @@
     letter-spacing: -2.3px;
     text-transform: uppercase;
     padding: 65px 40px 32px 8px;
+    
+        @include breakpoint($tablet-bp) {
+            max-width: 350px ; 
+        }
 
 }
 
@@ -94,6 +128,10 @@
     font-weight: 300;
     line-height: 1.2;
     padding-left: 2px;
+
+        @include breakpoint($tablet-bp) {
+            max-width: 350px ; 
+        }
 }
 
 .main_button {
@@ -130,13 +168,31 @@
     position: relative;
     left: -6px;
     z-index: 2;
-    &::after {
-        content: url(/assets/images/cycle_sahodow.png);
-        position: absolute;
-        top: 0;
-        left: 40px;
+        img {
+            display: block;
 
-    }
+            @include breakpoint($tablet-bp) {
+                max-width: 350px ;
+                max-height: 375px ;
+            }
+        }
+ 
+}
+.shadow {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 40px;
+
+        img {
+            display: block;
+
+            @include breakpoint($tablet-bp) {
+                max-width: 350px ;
+                max-height: 375px ;
+                
+            }
+        }
 }
 
 .pagination_ul {

@@ -10,23 +10,33 @@
     color: $black;
     font-family: "Museo";
     padding: 0px 191px 78px 293px;
+    text-align: center;
+
+        @include breakpoint($second-bp) {
+            max-width: 890px;
+            padding: 100px 0;
+        
+        }
 }
 
 .produts_title {
     font-size: 41px;
     font-weight: 700;
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: .8px;
     padding: 0 4px 35px 0;
 }
 
 .produts_subtitle {
-    text-align: center;
     font-size: 16px;
     font-weight: 300;
     padding-left: 31px;
     line-height: 18px;
+
+    @include breakpoint($tablet-bp) {
+        padding-left: 0;
+    
+    }
 
 }
 
@@ -36,6 +46,10 @@
     flex-wrap: wrap;
     padding-left: 150px;
     justify-content: center;
+
+        @include breakpoint($tablet-bp) {
+            padding-left: 10px;        
+        }
 }
 
 .showcase_iteam {

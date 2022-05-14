@@ -1,18 +1,11 @@
 .mainfeature {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     transform: rotate(-7deg);
     padding-top: 97px;
     color: $black;
-    font-family: 'Museo';
-
-
-        &--second {
-            align-items: center;
-            transform: rotate(7deg);
-            flex-direction: row-reverse;
-            padding: 30px 0 250px 0;
-        }
+    font-family: 'Museo'; 
 }
 
 .mainfeature_title {
@@ -22,25 +15,25 @@
     letter-spacing: 0.3px;
     text-align: left;
     text-transform: uppercase;
-    padding-bottom: 48px;
-
-        &--second {
-            padding-left: 3px;
-            color: $white;
-        }
+    padding-bottom: 47px;
 }
 
 .mainfeature_info {
     position: relative;
     top: 0;
-    left: 185px;
+    left: 196px;
 
-        &--second {
-            left: 49px;
+        @include breakpoint($tablet-bp) {
+            left: 85px;;
+        }
+
+        @include breakpoint($second-bp) {
+            left: 15px;
         }
 }
 
-.mainfeature_text {
+.mainfeature_text, 
+.secondfeature_text {
     width: 498px;
     font-size: 16px;
     line-height: 19px;
@@ -53,16 +46,29 @@
 .mainfeature_image {
     position: relative;
     bottom: 165px;
-    right: 64px;
+    right: 54px;
     z-index: 2;
 
-        &--second {
-            bottom: 51px;
-            right: 58px;
+        @include breakpoint($tablet-bp) {
+            bottom: 0;
+        }
+
+        @include breakpoint($second-bp) {
+            right: 15px;
+
+            img {
+                display: block;
+                max-width: 600px;
+                max-height: 650px;
+
+            }
+
+        
         }
 }
 
-.mainfeature_button {
+.mainfeature_button,
+.secondfeature_button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,10 +95,5 @@
             a {
                 color: $grey;
             }
-    }
-
-    &--second {
-        margin-left: 29px;
-
     }
 }

@@ -8,21 +8,53 @@ header {
 }
 
 .header_list {
-    padding: 0 0 0 293px;
+    padding: 0 0 0 20%;
     display: flex;
+
+        @include breakpoint($tablet-bp) {
+            padding: 0 0 0 5%;   
+        }
+
+        @include breakpoint($second-bp) {
+           justify-content: space-between;  
+           flex-direction: row-reverse; 
+        }
+
 }
 
 .header_right {
     margin: auto 0;
+    padding-left: 8px;
 }
 
 .header_left {
-    padding: 15px 283px 49px 0;
+    padding: 15px 24% 49px 5px;
+
+        @include breakpoint($tablet-bp) {
+            padding: 15px 10% 49px 5px;
+        }
+
 }
 
 .header_menu {
     display: flex;
     padding: 6px 0 10px 0;
+
+        @include breakpoint($second-bp) {
+
+                &--mobile {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 104px;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                    background-color: rgba($grey, .2);
+                    padding: 6px 0 0 0 ;
+                }
+        }
+
 }
 
 .menu_li {
@@ -34,6 +66,10 @@ header {
 
     &--pd {
         padding-right: 33px;
+
+            @include breakpoint($second-bp) {
+                padding-right: 0;
+            }
     }
 
      a { 
@@ -46,7 +82,58 @@ header {
         color: $orange; 
         font-weight: 700; 
         padding: 0 15px 0 12px;
+
+        @include breakpoint($second-bp) {
+            display: none;
+        }
+
      }
+
+     @include breakpoint($second-bp) {
+         padding-bottom: 15px;
+
+            &:hover {
+                background-color: rgba($grey, .5);
+            }
+     }
+
+}
+
+.header__burger{
+    display: none;
+    @include breakpoint ($second-bp) {
+            display: block;
+            position: relative;
+            width: 45px;
+            height: 30px;
+            align-self: center;
+            margin-right: 30px;
+            margin-bottom: 29px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 3px;
+                background-color: $white;
+            }
+    
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: $white;
+        }
+            span{
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background-color: $white;
+                top: 13px;
+            }
+    } 
 }
 
 

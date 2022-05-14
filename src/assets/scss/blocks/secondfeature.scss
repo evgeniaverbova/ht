@@ -1,0 +1,52 @@
+.secondfeature {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+    padding: 0 80px;
+    font-family: 'Museo'; 
+}
+
+.secondfeature_image {
+    position: relative;
+    top: -224px;
+    margin-right: 110px;
+
+        @include breakpoint($second-bp) {
+            
+            img {
+                display: block;
+                max-width: 500px;
+                max-height: 550px;
+
+            }
+
+        
+        }
+}
+
+.secondfeature_title {
+    max-width: 374px;
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-align: left;
+    text-transform: uppercase;
+    color: $white;
+    padding: 0 0 48px 3px;
+}
+
+.secondfeature_info {
+    position: relative;
+    top: -55px;
+
+    @include breakpoint($tablet-bp) {
+        padding: 100px 0 200px 0;
+    }
+
+
+}
+
+.secondfeature_button {
+    margin-left: 28px;
+}

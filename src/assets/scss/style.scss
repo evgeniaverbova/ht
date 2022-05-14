@@ -1,4 +1,5 @@
 @import "_vars";
+@import "mixin";
 @import "fonts";
 @import "vendor/reset";
 
@@ -8,7 +9,9 @@
 @import "blocks/service";
 @import "blocks/products";
 @import "blocks/mainfeature";
-@import "blocks/newslatter.scss";
+@import "blocks/newslatter";
+@import "blocks/secondfeature";
+
 
 
 
