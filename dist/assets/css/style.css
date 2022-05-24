@@ -397,86 +397,6 @@ textarea {
     padding: 0.2em 0;
 }
 
-.wrapper {
-    width: 100%;
-    background-color: #222222;
-    position: relative;
-    overflow-x: hidden;
-}
-
-.wrapper::after {
-    content: "";
-    display: block;
-    height: 501px;
-    width: 107%;
-    background-color: #dde6e8;
-    position: relative;
-    top: -130px;
-    left: 0;
-    z-index: 3;
-    -webkit-transform: rotate(-7deg);
-    transform: rotate(-7deg);
-}
-
-.page--one {
-    padding-top: 97px;
-    z-index: 3;
-}
-
-.page--two {
-    position: relative;
-    padding-top: 6px;
-    top: -400px;
-    background-color: #dde6e8;
-    z-index: 5;
-}
-
-.page--three {
-    display: block;
-    width: 107%;
-    background-color: #ffffff;
-    position: relative;
-    bottom: 570px;
-    left: -76px;
-    z-index: 6;
-    -webkit-transform: rotate(7deg);
-    transform: rotate(7deg);
-}
-
-@media screen and (max-width: 1300px) {
-    .page--three {
-        left: -86px;
-    }
-}
-
-.page--three::after {
-    content: "";
-    display: block;
-    height: 300px;
-    width: 107%;
-    background-color: #ffae00;
-    position: relative;
-    top: -59px;
-    left: 15px;
-    z-index: 3;
-    -webkit-transform: rotate(-14deg);
-    transform: rotate(-14deg);
-}
-
-@media screen and (max-width: 1300px) {
-    .page--three::after {
-        top: 50px;
-    }
-}
-
-.page--four {
-    background-color: #ffae00;
-    position: relative;
-    bottom: 719px;
-    left: 0;
-    z-index: 7;
-}
-
 .main {
     display: -ms-flexbox;
     display: flex;
@@ -956,6 +876,87 @@ header {
     width: 285px;
 }
 
+.wrapper {
+    width: 100%;
+    background-color: #222222;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.page--one {
+    padding-top: 97px;
+    z-index: 3;
+}
+
+.page--one::after {
+    content: "";
+    display: block;
+    height: 501px;
+    width: 107%;
+    background-color: #dde6e8;
+    position: relative;
+    top: -130px;
+    left: 0;
+    z-index: 3;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+
+.page--two {
+    position: relative;
+    padding-top: 6px;
+    top: -400px;
+    background-color: #dde6e8;
+    z-index: 5;
+}
+
+.page--two::after {
+    content: "";
+    display: block;
+    height: 301px;
+    width: 107%;
+    background-color: #ffffff;
+    position: absolute;
+    bottom: -133px;
+    left: -45px;
+    z-index: 3;
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+}
+
+.page--three {
+    background-color: #ffffff;
+    position: relative;
+    bottom: 470px;
+    left: 0;
+    z-index: 6;
+}
+
+.page--three::after {
+    content: "";
+    display: block;
+    height: 300px;
+    width: 110%;
+    background-color: #ffae00;
+    position: relative;
+    top: -59px;
+    left: -45px;
+    z-index: 3;
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}
+
+@media screen and (max-width: 1300px) {
+    .page--three::after {
+        top: 50px;
+    }
+}
+
+.page--four {
+    position: absolute;
+    width: 100%;
+}
+
 .products {
     width: 100%;
     display: -ms-flexbox;
@@ -1081,9 +1082,6 @@ header {
     flex-wrap: wrap;
     -ms-flex-pack: center;
     justify-content: center;
-    -webkit-transform: rotate(-7deg);
-    transform: rotate(-7deg);
-    padding-top: 97px;
     color: #000000;
     font-family: "Museo";
 }
@@ -1101,7 +1099,7 @@ header {
 .mainfeature_info {
     position: relative;
     top: 0;
-    left: 196px;
+    left: 189px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -1130,7 +1128,7 @@ header {
 .mainfeature_image {
     position: relative;
     bottom: 165px;
-    right: 54px;
+    right: 59px;
     z-index: 2;
 }
 
@@ -1200,14 +1198,13 @@ header {
     justify-content: center;
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
-    padding: 0 145px;
+    padding: 0 80px;
     font-family: "Museo";
-}
-
-@media screen and (max-width: 1300px) {
-    .secondfeature {
-        padding: 0 0;
-    }
+    background-color: #ffae00;
+    position: relative;
+    bottom: 619px;
+    left: 0;
+    z-index: 7;
 }
 
 .secondfeature_image {
@@ -1217,10 +1214,6 @@ header {
 }
 
 @media screen and (max-width: 950px) {
-    .secondfeature_image {
-        top: 0;
-    }
-
     .secondfeature_image img {
         display: block;
         max-width: 500px;
@@ -1242,6 +1235,12 @@ header {
 .secondfeature_info {
     position: relative;
     top: -55px;
+}
+
+@media screen and (max-width: 1300px) {
+    .secondfeature_info {
+        padding: 100px 0 200px 0;
+    }
 }
 
 .secondfeature_button {

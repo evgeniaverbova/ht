@@ -2,10 +2,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    transform: rotate(-7deg);
-    padding-top: 97px;
     color: $black;
     font-family: 'Museo'; 
+
+
 }
 
 .mainfeature_title {
@@ -21,7 +21,7 @@
 .mainfeature_info {
     position: relative;
     top: 0;
-    left: 196px;
+    left: 189px;
 
         @include breakpoint($tablet-bp) {
             left: 85px;;
@@ -46,7 +46,7 @@
 .mainfeature_image {
     position: relative;
     bottom: 165px;
-    right: 54px;
+    right: 59px;
     z-index: 2;
 
         @include breakpoint($tablet-bp) {

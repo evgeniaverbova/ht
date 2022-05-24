@@ -1,0 +1,69 @@
+footer {
+    background-color: $black;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    bottom: -163px;
+   font-family: 'Museo';
+    font-weight: 300;
+}
+
+.footer {
+    padding: 0 100px 0 244px;
+}
+
+.footer_inner {
+    display: flex;
+}
+
+.footer_info {
+    max-width: 325px;
+    color: $white;
+    padding: 7px 87px 95px 0;
+}
+
+.footer_text {
+    font-size: 15px;
+    text-align: left;
+    padding-top: 25px;
+    line-height: 1.2;
+}
+
+.footer_logo {
+    padding-bottom: 15px;
+}
+
+.header_li {
+    font-weight: 700;
+    color: $white;
+    padding-bottom: 41px;
+}
+
+.footer_right {
+    display: flex;
+
+        li:not(:first-child) {
+            color: #969696;
+            padding-bottom: 20px;
+        }
+}
+
+.footer_list:not(:last-child) {
+    padding-right: 100px;
+}
+
+.copyright {
+    background-color: #111111 ;
+    text-align: center;
+}
+
+.copyright_text {
+    padding: 29px 0;
+    color: $white;
+    font-size: 15px;
+    font-family: 'TimesNewRomanPSMT';
+
+        span {
+            color: #fcff00;
+        }
+}

@@ -63,9 +63,6 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
 }
 
 ol, ul {
@@ -396,76 +393,6 @@ textarea {
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
-}
-
-.wrapper {
-  width: 100%;
-  background-color: #222222;
-  position: relative;
-  overflow-x: hidden;
-}
-.wrapper::after {
-  content: "";
-  display: block;
-  height: 501px;
-  width: 107%;
-  background-color: #dde6e8;
-  position: relative;
-  top: -130px;
-  left: 0;
-  z-index: 3;
-  transform: rotate(-7deg);
-}
-
-.page--one {
-  padding-top: 97px;
-  z-index: 3;
-}
-.page--two {
-  position: relative;
-  padding-top: 6px;
-  top: -400px;
-  background-color: #dde6e8;
-  z-index: 5;
-}
-.page--three {
-  display: block;
-  width: 107%;
-  background-color: #ffffff;
-  position: relative;
-  bottom: 570px;
-  left: -76px;
-  z-index: 6;
-  transform: rotate(7deg);
-}
-@media screen and (max-width: 1300px) {
-  .page--three {
-    left: -86px;
-  }
-}
-.page--three::after {
-  content: "";
-  display: block;
-  height: 300px;
-  width: 110%;
-  background-color: #ffae00;
-  position: relative;
-  top: -59px;
-  left: 15px;
-  z-index: 3;
-  transform: rotate(-14deg);
-}
-@media screen and (max-width: 1300px) {
-  .page--three::after {
-    top: 50px;
-  }
-}
-.page--four {
-  background-color: #ffae00;
-  position: relative;
-  bottom: 719px;
-  left: 0;
-  z-index: 7;
 }
 
 .main {
@@ -887,6 +814,105 @@ header {
   width: 285px;
 }
 
+.wrapper {
+  width: 100%;
+  height: auto;
+  background-color: #222222;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.page--one {
+  padding-top: 97px;
+  z-index: 3;
+}
+.page--one::after {
+  content: "";
+  display: block;
+  height: 501px;
+  width: 107%;
+  background-color: #dde6e8;
+  position: relative;
+  top: -130px;
+  left: 0;
+  z-index: 3;
+  transform: rotate(-7deg);
+}
+.page--two {
+  position: relative;
+  padding-top: 6px;
+  top: -400px;
+  background-color: #dde6e8;
+  z-index: 5;
+}
+.page--two::after {
+  content: "";
+  display: block;
+  height: 301px;
+  width: 107%;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -133px;
+  left: -45px;
+  z-index: 3;
+  transform: rotate(7deg);
+}
+.page--three {
+  background-color: #ffffff;
+  position: relative;
+  bottom: 470px;
+  left: 0;
+  z-index: 6;
+}
+.page--three::after {
+  content: "";
+  display: block;
+  height: 300px;
+  width: 110%;
+  background-color: #ffae00;
+  position: relative;
+  top: -59px;
+  left: -45px;
+  z-index: 3;
+  transform: rotate(-7deg);
+}
+@media screen and (max-width: 1300px) {
+  .page--three::after {
+    top: 50px;
+  }
+}
+.page--four {
+  position: absolute;
+  width: 100%;
+}
+.page--five {
+  position: relative;
+}
+.page--five::before {
+  content: "";
+  display: block;
+  height: 300px;
+  width: 110%;
+  background-color: #212121;
+  position: relative;
+  top: -160px;
+  left: -45px;
+  z-index: 7;
+  transform: rotate(7deg);
+}
+.page--five::after {
+  content: "";
+  display: block;
+  height: 300px;
+  width: 110%;
+  background-color: #000000;
+  position: relative;
+  bottom: 45px;
+  left: -45px;
+  z-index: 7;
+  transform: rotate(-5deg);
+}
+
 .products {
   width: 100%;
   display: flex;
@@ -993,8 +1019,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  transform: rotate(-7deg);
-  padding-top: 97px;
   color: #000000;
   font-family: "Museo";
 }
@@ -1012,7 +1036,7 @@ header {
 .mainfeature_info {
   position: relative;
   top: 0;
-  left: 196px;
+  left: 189px;
 }
 @media screen and (max-width: 1300px) {
   .mainfeature_info {
@@ -1039,7 +1063,7 @@ header {
 .mainfeature_image {
   position: relative;
   bottom: 165px;
-  right: 54px;
+  right: 59px;
   z-index: 2;
 }
 @media screen and (max-width: 1300px) {
@@ -1089,6 +1113,70 @@ header {
   color: #dde6e8;
 }
 
+.newsletter {
+  display: flex;
+  padding: 0 100px 0 245px;
+  position: absolute;
+  top: 15px;
+  z-index: 10;
+}
+
+.newsletter_tittle {
+  color: #ffffff;
+  font-family: "Museo";
+  font-size: 27px;
+  font-weight: 700;
+  text-align: left;
+}
+.newsletter_tittle span {
+  color: #f8d801;
+  font-size: 35px;
+  line-height: 1.8;
+  padding-left: 4px;
+}
+
+.newsletter_right {
+  padding: 10px 0 10px 113px;
+}
+
+.newsletter_input {
+  border: none;
+  background-color: transparent;
+  width: 337px;
+  padding: 17px 0 15px 33px;
+  color: #a7a7a7;
+  transform: skew(34deg);
+}
+.newsletter_input::placeholder {
+  font-family: "Museo";
+  font-size: 15px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.newsletter_right-inner {
+  transform: skew(-34deg);
+  border: 1px solid #ffffff;
+}
+
+.newsletter_form {
+  display: flex;
+}
+
+.newsletter_btn {
+  cursor: pointer;
+  padding: 15px 31px;
+  border: 1px solid #ffde00;
+  transform: skew(-34deg);
+}
+.newsletter_btn p {
+  color: #ffea00;
+  transform: skew(34deg);
+  font-family: "Museo";
+  font-size: 20px;
+  font-weight: 700;
+}
+
 .secondfeature {
   display: flex;
   flex-wrap: wrap;
@@ -1096,6 +1184,11 @@ header {
   flex-direction: row-reverse;
   padding: 0 80px;
   font-family: "Museo";
+  background-color: #ffae00;
+  position: relative;
+  bottom: 622px;
+  left: 0;
+  z-index: 7;
 }
 
 .secondfeature_image {
@@ -1134,4 +1227,72 @@ header {
 
 .secondfeature_button {
   margin-left: 28px;
+}
+
+footer {
+  background-color: #000000;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  bottom: -163px;
+  font-family: "Museo";
+  font-weight: 300;
+}
+
+.footer {
+  padding: 0 100px 0 244px;
+}
+
+.footer_inner {
+  display: flex;
+}
+
+.footer_info {
+  max-width: 325px;
+  color: #ffffff;
+  padding: 7px 87px 95px 0;
+}
+
+.footer_text {
+  font-size: 15px;
+  text-align: left;
+  padding-top: 25px;
+  line-height: 1.2;
+}
+
+.footer_logo {
+  padding-bottom: 15px;
+}
+
+.header_li {
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 41px;
+}
+
+.footer_right {
+  display: flex;
+}
+.footer_right li:not(:first-child) {
+  color: #969696;
+  padding-bottom: 20px;
+}
+
+.footer_list:not(:last-child) {
+  padding-right: 100px;
+}
+
+.copyright {
+  background-color: #111111;
+  text-align: center;
+}
+
+.copyright_text {
+  padding: 29px 0;
+  color: #ffffff;
+  font-size: 15px;
+  font-family: "TimesNewRomanPSMT";
+}
+.copyright_text span {
+  color: #fcff00;
 }
