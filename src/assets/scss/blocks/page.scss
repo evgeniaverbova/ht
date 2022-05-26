@@ -1,114 +1,26 @@
-.wrapper {
+.page {
     width: 100%;
     height: auto;
     background-color: $darkgrey;
     position: relative;
-    overflow-x: hidden;
-   
 }
 
-.page {  
+.pagetwo {
+    height: 500px;
+    background-color: #dde6e8;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width:110%;
+        height: 300px;
+        top: -130px;
+        left: -5%;
+        background-color: #dde6e8;
+        transform:rotate(-7deg);
 
-        &--one {
-            padding-top: 97px;
-            z-index: 3;
-            
-                &::after {
-                    content: '';
-                    display: block;
-                    height: 501px;
-                    width: 107%;
-                    background-color: $grey;
-                    position: relative;
-                    top: -130px;
-                    left: 0;
-                    z-index: 3;
-                    transform: rotate(-7deg);
-                    } 
-
-        }
-
-        &--two {
-            position: relative;
-            padding-top: 6px;
-            top: -400px;
-            background-color: $grey;
-            z-index: 5;
-
-                &::after {
-                    content: '';
-                    display: block;
-                    height: 301px;
-                    width: 107%;
-                    background-color: $white;
-                    position: absolute;
-                    bottom: -133px;
-                    left: -45px;
-                    z-index: 3;
-                    transform: rotate(7deg);
-                    } 
-
-        }
-
-        &--three {
-            background-color: $white;
-            position: relative;
-            bottom: 470px;
-            left: 0;
-            z-index: 6;
-
-                &::after {
-                    content: '';
-                    display: block;
-                    height: 300px;
-                    width: 110%;
-                    background-color: $orange;
-                    position: relative;
-                    top: -59px;
-                    left: -45px;
-                    z-index: 3;
-                    transform: rotate(-7deg);
-        
-                    @include breakpoint($tablet-bp) {
-                        top: 50px;
-                    }
-                }
-
-        }
-
-        &--four {
-            position: absolute;
-            width: 100%;
-        }
-
-        &--five {
-            position: relative;
-            &::before {
-                content: '';
-                display: block;
-                height: 300px;
-                width: 110%;
-                background-color: #212121;
-                position: relative;
-                top: -160px;
-                left: -45px;
-                z-index: 7;
-                transform: rotate(7deg);
-            }
-
-            &::after {
-                content: '';
-                display: block;
-                height: 300px;
-                width: 110%;
-                background-color: $black;
-                position: relative;
-                bottom: 45px;
-                left: -45px;
-                z-index: 7;
-                transform: rotate(-5deg);
-            }
-
-        }
+    }
 
 }
+

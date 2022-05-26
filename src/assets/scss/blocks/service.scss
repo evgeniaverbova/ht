@@ -3,38 +3,50 @@
     flex-wrap: wrap;
     justify-content: center;
     height: auto;
-    // padding-left: 171px;
     z-index: 7;
-    position: relative;
-    overflow: hidden;
-    padding: 0 0 0 12%;
+    // position: relative;
 
-        @include breakpoint($tablet-bp) {
-            padding: 0 0;
-          
-        }
-        
+        // &::after {
+        //     content: '';
+        //     position: absolute;
+        //     display: block;
+        //     width:110%;
+        //     height: 300px;
+        //     bottom:-110px;
+        //     left:-5%;
+        //     background-color: #f8de01;
+        //     transform:rotate(-7deg);
+
+        // }
+
 
 }
 
 .service_iteam {
     display: flex;
-    max-width: 524px;
+    width: 524px;
+    height: 266px;
     color: $black;
-    margin: 0 40px 36px 0;
+    margin: 0 0 36px 0;
     background-color: #f8de01;
+    position: relative;
+    z-index: 3;
+
+        &:nth-child(3),
+        &:first-child {
+            margin-right: 40px;
+        }
 
         &--black {
             background-color: $black;
             color: $white;
         }
-}
+    }
 
 .service_info {
     font-family: "Museo";
     text-align: left;
-    padding: 36px 0 18px 41px;
-    min-width: 277px;
+    padding: 34px 0 0px 42px;
     z-index: 3;
 }
 
@@ -44,16 +56,14 @@
     text-transform: uppercase;
     line-height: 1.4;
     letter-spacing: 0.5px;
-
-
-
+    max-width: 227px;
 }
 
 .service_text {
     max-width: 200px;
     font-size: 16px;
     font-weight: 300;
-    padding: 26px 0 27px 0;
+    padding: 26px 0 29px 0;
     line-height: 1.2;
 }
 
@@ -77,12 +87,13 @@
 }
 
 .service_img {
-    position: relative;
-    right: 77px;
-    
+    position: absolute;
+    right: -3px;
+
         img {
             display: block;
-            height: 266px;
+            height: 100%;
             width: 285px;   
         }
 }
+ 

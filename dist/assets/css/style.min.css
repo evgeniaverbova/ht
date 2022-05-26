@@ -63,6 +63,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 
 ol, ul {
@@ -397,14 +398,12 @@ textarea {
 
 .main {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  max-width: 1000px;
+  padding: 86px 0 100px 0;
   color: #ffffff;
   font-family: "Museo";
-  margin-bottom: 98px;
-  padding-left: 10px;
-  position: relative;
-  z-index: 4;
+  margin: 0 auto;
 }
 @media screen and (max-width: 950px) {
   .main {
@@ -412,6 +411,9 @@ textarea {
   }
 }
 
+.main_info {
+  padding: 56px 34px 0 22px;
+}
 @media screen and (max-width: 1300px) {
   .main_info {
     margin-bottom: 50px;
@@ -427,7 +429,7 @@ textarea {
   text-align: left;
   letter-spacing: -2.3px;
   text-transform: uppercase;
-  padding: 65px 40px 32px 8px;
+  padding: 0 0 33px 6px;
 }
 @media screen and (max-width: 1300px) {
   .main_title {
@@ -441,7 +443,6 @@ textarea {
   text-align: left;
   font-weight: 300;
   line-height: 1.2;
-  padding-left: 2px;
 }
 @media screen and (max-width: 1300px) {
   .main_text {
@@ -450,35 +451,34 @@ textarea {
 }
 
 .main_button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 46px 0 0 22px;
+  display: inline-block;
+  width: 160px;
+  text-align: center;
+  margin: 46px 0 0 21px;
   border: 1px #f8e401 solid;
-  max-width: 160px;
-  height: 52px;
   transform: skew(-35deg);
   transition: 1s;
+  padding: 16px 0;
 }
-.main_button a {
+.main_button span {
+  display: block;
   color: #9cf801;
-  font-family: inherit;
   font-weight: 700;
   font-size: 20px;
-  text-align: center;
   transform: skew(35deg);
 }
 .main_button:hover {
   background-color: #f8e401;
   border: 2px solid #9cf801;
+  cursor: pointer;
 }
-.main_button:hover a {
+.main_button:hover span {
   color: #ffffff;
 }
 
 .main_img {
   position: relative;
-  left: -6px;
+  top: -6px;
   z-index: 2;
 }
 .main_img img {
@@ -507,17 +507,22 @@ textarea {
   }
 }
 
-.pagination_ul {
+.pagination {
+  width: 100%;
   display: flex;
   justify-content: center;
-  padding-left: 11%;
-  margin-bottom: 100px;
+  padding-top: 89px;
+}
+
+.pagination_ul {
+  display: flex;
 }
 .pagination_ul li {
   display: block;
   width: 13px;
-  height: 10px;
+  height: 9px;
   background-color: #ffae00;
+  border: 1px solid #ffae00;
   margin-right: 16px;
   transform: skew(-35deg);
   cursor: pointer;
@@ -579,39 +584,32 @@ textarea {
   display: block;
   width: 0;
   height: 0;
-  border-top: 46px solid transparent;
-  border-left: 44px solid #f8e401;
-  border-bottom: 40px solid transparent;
-  position: relative;
-  top: 54em;
+  border-bottom: 427px solid #ffae00;
+  border-right: 373px solid transparent;
+  position: absolute;
   left: 0;
+  bottom: 60px;
+  z-index: 3;
+  transform: skewY(-7deg);
 }
-.triangle6::after {
+.triangle6::before {
   content: "";
   display: block;
   width: 0;
   height: 0;
-  border-bottom: 427px solid #ffae00;
-  border-right: 373px solid transparent;
-  position: absolute;
-  left: -43px;
-  top: 28px;
-  z-index: 3;
-  transform: skewY(-7deg);
-}
-@media screen and (max-width: 1300px) {
-  .triangle6 {
-    top: 94em;
-  }
+  border-top: 46px solid transparent;
+  border-left: 44px solid #f8e401;
+  border-bottom: 40px solid transparent;
+  position: relative;
+  top: -86px;
+  left: 0;
 }
 
 header {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
   border-bottom: 2px dotted #f8e401;
+  position: relative;
+  z-index: 2;
 }
 
 .header_list {
@@ -668,14 +666,6 @@ header {
   font-size: 17px;
   font-weight: 300;
   text-transform: uppercase;
-}
-.menu_li--pd {
-  padding-right: 33px;
-}
-@media screen and (max-width: 950px) {
-  .menu_li--pd {
-    padding-right: 0;
-  }
 }
 .menu_li a {
   color: inherit;
@@ -745,22 +735,20 @@ header {
   justify-content: center;
   height: auto;
   z-index: 7;
-  position: relative;
-  overflow: hidden;
-  padding: 0 0 0 12%;
-}
-@media screen and (max-width: 1300px) {
-  .services {
-    padding: 0 0;
-  }
 }
 
 .service_iteam {
   display: flex;
-  max-width: 524px;
+  width: 524px;
+  height: 266px;
   color: #000000;
-  margin: 0 40px 36px 0;
+  margin: 0 0 36px 0;
   background-color: #f8de01;
+  position: relative;
+  z-index: 3;
+}
+.service_iteam:nth-child(3), .service_iteam:first-child {
+  margin-right: 40px;
 }
 .service_iteam--black {
   background-color: #000000;
@@ -770,8 +758,7 @@ header {
 .service_info {
   font-family: "Museo";
   text-align: left;
-  padding: 36px 0 18px 41px;
-  min-width: 277px;
+  padding: 34px 0 0px 42px;
   z-index: 3;
 }
 
@@ -781,13 +768,14 @@ header {
   text-transform: uppercase;
   line-height: 1.4;
   letter-spacing: 0.5px;
+  max-width: 227px;
 }
 
 .service_text {
   max-width: 200px;
   font-size: 16px;
   font-weight: 300;
-  padding: 26px 0 27px 0;
+  padding: 26px 0 29px 0;
   line-height: 1.2;
 }
 
@@ -805,112 +793,37 @@ header {
 }
 
 .service_img {
-  position: relative;
-  right: 77px;
+  position: absolute;
+  right: -3px;
 }
 .service_img img {
   display: block;
-  height: 266px;
+  height: 100%;
   width: 285px;
 }
 
-.wrapper {
+.page {
   width: 100%;
   height: auto;
   background-color: #222222;
   position: relative;
-  overflow-x: hidden;
 }
 
-.page--one {
-  padding-top: 97px;
-  z-index: 3;
-}
-.page--one::after {
-  content: "";
-  display: block;
-  height: 501px;
-  width: 107%;
+.pagetwo {
+  height: 500px;
   background-color: #dde6e8;
   position: relative;
+}
+.pagetwo::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 110%;
+  height: 300px;
   top: -130px;
-  left: 0;
-  z-index: 3;
-  transform: rotate(-7deg);
-}
-.page--two {
-  position: relative;
-  padding-top: 6px;
-  top: -400px;
+  left: -5%;
   background-color: #dde6e8;
-  z-index: 5;
-}
-.page--two::after {
-  content: "";
-  display: block;
-  height: 301px;
-  width: 107%;
-  background-color: #ffffff;
-  position: absolute;
-  bottom: -133px;
-  left: -45px;
-  z-index: 3;
-  transform: rotate(7deg);
-}
-.page--three {
-  background-color: #ffffff;
-  position: relative;
-  bottom: 470px;
-  left: 0;
-  z-index: 6;
-}
-.page--three::after {
-  content: "";
-  display: block;
-  height: 300px;
-  width: 110%;
-  background-color: #ffae00;
-  position: relative;
-  top: -59px;
-  left: -45px;
-  z-index: 3;
   transform: rotate(-7deg);
-}
-@media screen and (max-width: 1300px) {
-  .page--three::after {
-    top: 50px;
-  }
-}
-.page--four {
-  position: absolute;
-  width: 100%;
-}
-.page--five {
-  position: relative;
-}
-.page--five::before {
-  content: "";
-  display: block;
-  height: 300px;
-  width: 110%;
-  background-color: #212121;
-  position: relative;
-  top: -160px;
-  left: -45px;
-  z-index: 7;
-  transform: rotate(7deg);
-}
-.page--five::after {
-  content: "";
-  display: block;
-  height: 300px;
-  width: 110%;
-  background-color: #000000;
-  position: relative;
-  bottom: 45px;
-  left: -45px;
-  z-index: 7;
-  transform: rotate(-5deg);
 }
 
 .products {

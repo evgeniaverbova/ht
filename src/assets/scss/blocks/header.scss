@@ -1,10 +1,8 @@
 header {
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
     border-bottom: 2px dotted $yellow;
+    position: relative;
+    z-index: 2;
 }
 
 .header_list {
@@ -64,13 +62,7 @@ header {
     font-weight: 300;
     text-transform: uppercase;
 
-    &--pd {
-        padding-right: 33px;
 
-            @include breakpoint($second-bp) {
-                padding-right: 0;
-            }
-    }
 
      a { 
         color: inherit;

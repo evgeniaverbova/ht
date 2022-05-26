@@ -1,20 +1,20 @@
 
 .main {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    max-width: 1000px;
+    padding: 86px 0 100px 0;
     color: $white;
     font-family: "Museo";
-    margin-bottom: 98px;
-    padding-left: 10px;
-    position: relative;
-    z-index: 4;
+    margin: 0 auto;
+
         @include breakpoint($second-bp) {
             padding-top: 130px;
         }
 }
 
 .main_info {
+    padding: 56px 34px 0 22px;;
     @include breakpoint($tablet-bp) {
         margin-bottom: 50px;
     }
@@ -29,8 +29,7 @@
     text-align: left;
     letter-spacing: -2.3px;
     text-transform: uppercase;
-    padding: 65px 40px 32px 8px;
-    
+    padding: 0 0 33px 6px;   
         @include breakpoint($tablet-bp) {
             max-width: 350px ; 
         }
@@ -43,7 +42,7 @@
     text-align: left;
     font-weight: 300;
     line-height: 1.2;
-    padding-left: 2px;
+    // padding-left: 5px;
 
         @include breakpoint($tablet-bp) {
             max-width: 350px ; 
@@ -51,38 +50,38 @@
 }
 
 .main_button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 46px 0 0 22px;
+    display: inline-block;
+    width: 160px;
+    text-align: center;
+    margin: 46px 0 0 21px;
     border: 1px $yellow solid;
-    max-width: 160px;
-    height: 52px;
     transform: skew(-35deg);
     transition: 1s;
+    padding: 16px 0 ;
 
-    a {
-        color: $green;
-        font-family: inherit;
-        font-weight: 700;
-        font-size: 20px;
-        text-align: center;
-        transform: skew(35deg);
-    }
+        span {
+            display: block;
+            color: $green;
+            font-weight: 700;
+            font-size: 20px;
+            transform: skew(35deg);
+        }
 
-    &:hover {
-        background-color: $yellow;
-        border: 2px solid $green;
-        
-            a {
-                color: $white;
-            }
-    }
+        &:hover {
+            background-color: $yellow;
+            border: 2px solid $green;
+            cursor: pointer;
+
+            
+                span {
+                    color: $white;
+                }
+        }
 }
 
 .main_img {
     position: relative;
-    left: -6px;
+    top: -6px;
     z-index: 2;
         img {
             display: block;
@@ -111,17 +110,22 @@
         }
 }
 
-.pagination_ul {
+.pagination {
+    width: 100%;
     display: flex;
     justify-content: center;
-    padding-left: 11%;
-    margin-bottom: 100px;
+    padding-top: 89px;
+}
+
+.pagination_ul {
+    display: flex;
 
         li {
             display: block;
             width: 13px;
-            height: 10px;
+            height: 9px;
             background-color: $orange;
+            border: 1px solid $orange;
             margin-right: 16px;
             transform: skew(-35deg);
             cursor: pointer;
