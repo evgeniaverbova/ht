@@ -1,10 +1,12 @@
 .mainfeature {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    margin: 0 auto;
+    max-width: 1093px;
     color: $black;
     font-family: 'Museo'; 
-
+    position: relative;
+    z-index: 3;
 
 }
 
@@ -19,17 +21,7 @@
 }
 
 .mainfeature_info {
-    position: relative;
-    top: 0;
-    left: 189px;
-
-        @include breakpoint($tablet-bp) {
-            left: 85px;;
-        }
-
-        @include breakpoint($second-bp) {
-            left: 15px;
-        }
+    padding-top: 7px;
 }
 
 .mainfeature_text, 
@@ -44,47 +36,31 @@
 }
 
 .mainfeature_image {
-    position: relative;
-    bottom: 165px;
-    right: 59px;
-    z-index: 2;
-
-        @include breakpoint($tablet-bp) {
-            bottom: 0;
-        }
-
-        @include breakpoint($second-bp) {
-            right: 15px;
-
-            img {
-                display: block;
-                max-width: 600px;
-                max-height: 650px;
-
-            }
-
-        
-        }
+    position: absolute;
+    bottom: -32px;
+    right: 0;
+    z-index: 2;        
 }
 
 .mainfeature_button,
 .secondfeature_button {
-    display: flex;
+    display: inline-block;
     align-items: center;
-    justify-content: center;
+    text-align: center;
     transform: skew(-35deg);
-    max-width: 131px;
-    height: 52px;
+    width: 131px;
+ 
     border: 1px solid #212121;
     margin-left: 22px;
     transition: 1s;
 
-    a {
+    span {
+        display: block;
         color: $black;
-        font-family: inherit;
         font-weight: 700;
         font-size: 20px;
-        padding-right: 10px;
+        padding: 17px 0px;
+        // padding-right: 10px;
         transform: skew(35deg);
     }
 

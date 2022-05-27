@@ -1,26 +1,58 @@
 .page {
     width: 100%;
+    padding-top: 106px;
     height: auto;
     background-color: $darkgrey;
     position: relative;
-}
 
-.pagetwo {
-    height: 500px;
-    background-color: #dde6e8;
-    position: relative;
-    &::before {
+        &::after {
         content: '';
         position: absolute;
         display: block;
         width:110%;
-        height: 300px;
-        top: -130px;
+        height: 230px;
+        bottom: -110px;
         left: -5%;
-        background-color: #dde6e8;
+        background-color: $grey;
         transform:rotate(-7deg);
 
     }
+}
 
+.pagetwo {
+    background-color: $grey;
+    position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 110%;
+            height: 250px;
+            bottom: -124px;
+            left: -5%;
+            background-color: $white;
+            transform:rotate(7deg);
+
+        }
+
+}
+
+.pagethree {
+    position: relative;
+    height: 500px;
+
+        // &::before {
+        //     content: '';
+        //     position: absolute;
+        //     display: block;
+        //     width:110%;
+        //     height: 230px;
+        //     top: -96px;
+        //     left: -5%;
+        //     background-color: $white;
+        //     transform:rotate(7deg);
+
+        // }
 }
 

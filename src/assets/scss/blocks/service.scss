@@ -1,25 +1,11 @@
 .services {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     height: auto;
+    max-width: 1165px;
     z-index: 7;
-    // position: relative;
-
-        // &::after {
-        //     content: '';
-        //     position: absolute;
-        //     display: block;
-        //     width:110%;
-        //     height: 300px;
-        //     bottom:-110px;
-        //     left:-5%;
-        //     background-color: #f8de01;
-        //     transform:rotate(-7deg);
-
-        // }
-
-
+    margin: 0 auto;
 }
 
 .service_iteam {
@@ -27,21 +13,16 @@
     width: 524px;
     height: 266px;
     color: $black;
-    margin: 0 0 36px 0;
     background-color: #f8de01;
     position: relative;
     z-index: 3;
-
-        &:nth-child(3),
-        &:first-child {
-            margin-right: 40px;
-        }
+    margin-bottom: 36px;
 
         &--black {
             background-color: $black;
             color: $white;
         }
-    }
+}
 
 .service_info {
     font-family: "Museo";

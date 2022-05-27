@@ -1,15 +1,15 @@
 .products {
-    width: 100%;
+    max-width: 1165px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    padding-bottom: 300px;
 }
 
 .products_info {
     color: $black;
     font-family: "Museo";
-    padding: 0px 191px 78px 293px;
+    padding: 100px 0 78px 0;
     text-align: center;
 
         @include breakpoint($second-bp) {
@@ -30,25 +30,23 @@
 .produts_subtitle {
     font-size: 16px;
     font-weight: 300;
-    padding-left: 31px;
     line-height: 18px;
-
-    @include breakpoint($tablet-bp) {
-        padding-left: 0;
-    
-    }
-
+    max-width: 911px;
+    margin: 0 auto;
 }
 
 .products_showcase {
-    padding-bottom: 300px;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 150px;
-    justify-content: center;
+    justify-content: space-evenly;
+}
 
-        @include breakpoint($tablet-bp) {
-            padding-left: 10px;        
+.showcase_link {
+    transition: .7s;
+
+        &:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 10px 15px $darkgrey;
         }
 }
 
@@ -58,9 +56,8 @@
     width: 349px;
     height: 315px;
     background-color: $white;
-    margin-right: 20px;
     position: relative;
-    margin-bottom: 25px;
+    z-index: 3;
     
         &::after {
             content: "";
@@ -73,6 +70,7 @@
             background-color: $grey;
         }
 }
+
 
 .showcase_image {
     display: block;
