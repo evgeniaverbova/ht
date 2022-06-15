@@ -2,6 +2,7 @@
     max-width: 1165px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
     padding-bottom: 300px;
 }
@@ -25,6 +26,11 @@
     text-transform: uppercase;
     letter-spacing: .8px;
     padding: 0 4px 35px 0;
+
+        @include breakpoint($third-bp) {
+            font-size: 32px;
+
+        }
 }
 
 .produts_subtitle {
@@ -33,6 +39,16 @@
     line-height: 18px;
     max-width: 911px;
     margin: 0 auto;
+
+        @include breakpoint($phone-bp) {
+            max-width: 300px;
+        }
+        
+        @include breakpoint($third-bp) {
+            font-size: 14px;
+        }
+
+
 }
 
 .products_showcase {
@@ -43,6 +59,8 @@
 
 .showcase_link {
     transition: .7s;
+    margin-bottom: 20px;
+
 
         &:hover {
             transform: translateY(-1px);
@@ -58,6 +76,11 @@
     background-color: $white;
     position: relative;
     z-index: 3;
+
+        @include breakpoint($third-bp) {
+            width: 200px;
+            // height: 270px;
+        }
     
         &::after {
             content: "";
@@ -68,6 +91,11 @@
             width: 325px;
             height: 251px;
             background-color: $grey;
+
+                @include breakpoint($third-bp) {
+                    width: 176px;
+                    height: 237px;
+                }
         }
 }
 
@@ -82,6 +110,11 @@
     bottom: 44px;
     margin: auto;
     z-index: 5;
+
+        @include breakpoint($third-bp) {
+            width: 165px;
+            
+        }
 }
 
 .showcase_info {

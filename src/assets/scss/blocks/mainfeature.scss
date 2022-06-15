@@ -8,38 +8,94 @@
     position: relative;
     z-index: 3;
 
+        @include breakpoint($second-bp) {
+            justify-content: center;
+        }
+
+
 }
 
-.mainfeature_title {
+.mainfeature_title,
+.secondfeature_title {
     max-width: 374px;
     font-size: 42px;
     font-weight: 700;
     letter-spacing: 0.3px;
     text-align: left;
     text-transform: uppercase;
-    padding-bottom: 47px;
+    padding-bottom: 24px;
+
+        @include breakpoint($tablet-bp) {
+            font-size: 36px;
+        }
+
+        @include breakpoint($third-bp) {
+            font-size: 26px ;  
+            max-width: 250px;
+        }
+
 }
 
 .mainfeature_info {
-    padding-top: 7px;
+
+    @include breakpoint($tablet-bp) {
+        padding-left: 30px;
+    }
 }
 
 .mainfeature_text, 
 .secondfeature_text {
-    width: 498px;
+    max-width: 498px;
     font-size: 16px;
     line-height: 19px;
     font-weight: 300;
     text-align: left;
-    padding-left: 11px;
-    padding-bottom: 56px;
+    padding: 24px 0 56px 0;
+
+        @include breakpoint($tablet-bp) {
+            max-width: 400px;
+        }
+
+        @include breakpoint($third-bp) {
+            max-width: 300px;
+        }
 }
 
 .mainfeature_image {
     position: absolute;
     bottom: -32px;
     right: 0;
-    z-index: 2;        
+    z-index: 2;   
+
+            
+        @include breakpoint($second-bp) {
+            position: static;
+        }
+
+        @include breakpoint($tablet-bp) {
+            right: 30px;
+
+                img{
+                    display: block;
+                    max-width: 600px ;
+                }
+        }
+
+        @include breakpoint($phone-bp) {
+
+                img{
+                    max-width: 400px ;
+                }
+        }
+
+        @include breakpoint($third-bp) {
+            img {
+                max-width: 250px;
+            }
+        }
+
+        
+
 }
 
 .mainfeature_button,
@@ -49,27 +105,40 @@
     text-align: center;
     transform: skew(-35deg);
     width: 131px;
- 
     border: 1px solid #212121;
     margin-left: 22px;
     transition: 1s;
 
-    span {
-        display: block;
-        color: $black;
-        font-weight: 700;
-        font-size: 20px;
-        padding: 17px 0px;
-        // padding-right: 10px;
-        transform: skew(35deg);
-    }
+        @include breakpoint($third-bp) {
+            width: 100px;
+        }
 
-    &:hover {
-        background-color: #212121;
-        border: 2px solid $grey;
-        
-            a {
-                color: $grey;
-            }
-    }
+        &:hover {
+            transform: skew(0deg);
+            background-color: $black;
+
+
+        }
+}
+
+.secondfeature_span,
+.mainfeature_span  {
+    display: block;
+    color: $black;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 17px 0px;
+    transform: skew(35deg);
+    transition: 1s;
+
+        @include breakpoint($third-bp) {
+            font-size: 16px;
+            padding: 15px 0;
+        }
+
+        &:hover {
+            transform: skew(0);
+            color: $white;
+    
+        }
 }

@@ -1,54 +1,62 @@
 .secondfeature {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     flex-direction: row-reverse;
-    padding: 0 80px;
+    margin: 0 auto;
+    max-width: 1134px;
     font-family: 'Museo';
-    background-color: $orange;
     position: relative;
-    bottom: 622px;
-    left: 0;
-    z-index: 7; 
+
+        @include breakpoint($second-bp) {
+            justify-content: center;
+        }
 }
 
 .secondfeature_image {
-    position: relative;
-    top: -224px;
-    margin-right: 110px;
-
+    position: absolute;
+    top: -126px;
+    left: 0;
+    z-index: 3;
+     
         @include breakpoint($second-bp) {
-            
+            position: static;
+        }
+
+        @include breakpoint($tablet-bp) {
+            left: 30px;
+        }
+
+        @include breakpoint($tablet-bp) {
+
             img {
-                display: block;
-                max-width: 500px;
-                max-height: 550px;
-
+                max-width: 400px;
             }
+        }
 
-        
+        @include breakpoint($third-bp) {
+
+            img {
+                max-width: 250px;
+            }
         }
 }
 
 .secondfeature_title {
-    max-width: 374px;
-    font-size: 42px;
-    font-weight: 700;
-    letter-spacing: 0.3px;
-    text-align: left;
-    text-transform: uppercase;
     color: $white;
-    padding: 0 0 48px 3px;
 }
 
 .secondfeature_info {
-    position: relative;
-    top: -55px;
+    padding-top: 44px;
+   
+        @include breakpoint($tablet-bp) {
+            padding-right: 30px;
+        }
 
-    @include breakpoint($tablet-bp) {
-        padding: 100px 0 200px 0;
-    }
 
+        @include breakpoint($tablet-bp) {
+            padding: 0 0 0 30px;
+        }
+        
 
 }
 

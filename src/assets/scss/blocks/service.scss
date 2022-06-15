@@ -6,6 +6,11 @@
     max-width: 1165px;
     z-index: 7;
     margin: 0 auto;
+
+
+    @include breakpoint($phone-bp) {
+        // padding: 0 30px;
+    }
 }
 
 .service_iteam {
@@ -22,6 +27,14 @@
             background-color: $black;
             color: $white;
         }
+
+        @include breakpoint($phone-bp) {
+            width: 400px;
+        }
+
+        @include breakpoint($third-bp) {
+            width: 200px;
+        }
 }
 
 .service_info {
@@ -29,7 +42,19 @@
     text-align: left;
     padding: 34px 0 0px 42px;
     z-index: 3;
-}
+    
+
+        @include breakpoint($phone-bp) {
+            max-width: 300px;
+            margin: 0 auto;
+            padding-left: 0 ;
+        }
+
+        @include breakpoint($third-bp) {
+            width: 150px;
+            padding-top: 40px;
+        }
+    }
 
 .service_title {
     font-size: 24px;
@@ -38,6 +63,10 @@
     line-height: 1.4;
     letter-spacing: 0.5px;
     max-width: 227px;
+
+        @include breakpoint($third-bp) {
+            font-size: 18px;
+        }
 }
 
 .service_text {
@@ -46,6 +75,16 @@
     font-weight: 300;
     padding: 26px 0 29px 0;
     line-height: 1.2;
+
+        @include breakpoint($phone-bp) {
+           padding-left: 0;
+           max-width: none;
+        }
+
+        @include breakpoint($third-bp) {
+            font-size: 14px;
+            padding: 20px 0;
+        }
 }
 
 .service_button {
@@ -57,6 +96,10 @@
             font-family: "Museo";
             font-size: 20px;
             font-weight: 700;
+
+                @include breakpoint($third-bp) {
+                    font-size: 18px;
+                }
         }
 
         &--black {
@@ -69,12 +112,17 @@
 
 .service_img {
     position: absolute;
-    right: -3px;
+    right: 0;
 
         img {
             display: block;
             height: 100%;
             width: 285px;   
+
+                @include breakpoint($phone-bp) {
+                  display: none;
+                }
         }
+
 }
  

@@ -55,6 +55,12 @@
             border-top: 354px solid transparent;
             border-right: 322px solid $orange;
             border-bottom: 362px solid transparent;
+
+                @include breakpoint($phone-bp) {
+                    display: none;
+                }
+
+
         }
 }
 
@@ -71,6 +77,12 @@
     bottom : 0;
 
     transform: skewY(-7deg);
+
+
+    @include breakpoint($phone-bp) {
+        display: none;
+        
+    }
 
         &::before {
             content: '';

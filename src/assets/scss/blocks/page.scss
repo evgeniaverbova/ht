@@ -1,22 +1,23 @@
 .page {
     width: 100%;
     padding-top: 106px;
-    height: auto;
     background-color: $darkgrey;
     position: relative;
+    // overflow: hidden;
+
 
         &::after {
-        content: '';
-        position: absolute;
-        display: block;
-        width:110%;
-        height: 230px;
-        bottom: -110px;
-        left: -5%;
-        background-color: $grey;
-        transform:rotate(-7deg);
+            content: '';
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 303px;
+            background-color: $grey;
+            clip-path: polygon(0 84%, 100% 40%, 100% 100%, 0% 100%);
 
-    }
+        }
 }
 
 .pagetwo {
@@ -24,35 +25,77 @@
     position: relative;
 
         &::after {
-            content: '';
+            content: "";
             position: absolute;
-            display: block;
-            width: 110%;
-            height: 250px;
-            bottom: -124px;
-            left: -5%;
-            background-color: $white;
-            transform:rotate(7deg);
-
-        }
+            z-index: 1;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 303px;
+            background-color: #fff;
+            clip-path: polygon(0 100%, 0 20%, 100% 76%, 100% 100%);
+            }
 
 }
 
 .pagethree {
     position: relative;
-    height: 500px;
+    padding-bottom: 250px;
 
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     display: block;
-        //     width:110%;
-        //     height: 230px;
-        //     top: -96px;
-        //     left: -5%;
-        //     background-color: $white;
-        //     transform:rotate(7deg);
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 303px;
+            background-color: $orange;
+            clip-path: polygon(0 89%, 100% 33%, 100% 100%, 0% 100%);
+        }
+}
 
-        // }
+.pagefour {
+    position: relative;
+    background-color: $orange;
+    padding-bottom: 250px;
+
+        &::after {
+            content: '';
+                position: absolute;
+            z-index: 1;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 231px;
+            background-color: #212121;
+            clip-path: polygon(0 100%, 0 22%, 100% 96%, 100% 100%);
+            }
+
+}
+
+.pagefive {
+    background-color: #212121;
+    padding-bottom: 266px;
+    position: relative;
+    
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            bottom: -3px;
+            width: 100%;
+            height: 303px;
+            background-color: $black;
+            clip-path: polygon(0 84%, 100% 40%, 100% 100%, 0% 100%);
+                }
+
+}
+
+footer {
+    background-color: $black;
+    font-family: 'Museo';
+    font-weight: 300;
 }
 

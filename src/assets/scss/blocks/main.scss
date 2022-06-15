@@ -1,5 +1,14 @@
 .main {
     padding: 86px 0 100px 0;
+    position: relative;
+
+        @include breakpoint($second-bp) {
+            padding-top: 20px;
+        }
+
+        @include breakpoint($tablet-bp) {
+            padding: 86px 50px 100px 50px;
+        }
 
 }
 
@@ -12,16 +21,24 @@
     font-family: "Museo";
     margin: 0 auto;
 
-        @include breakpoint($second-bp) {
-            padding-top: 130px;
-        }
+        // @include breakpoint($second-bp) {
+        //     padding-top: 20px;
+        // }
+
+
+        // @include breakpoint($phone-bp) {
+        //     padding: 0 30px;
+        // }
 }
 
 .main_info {
     padding: 56px 0 0 0;
-    @include breakpoint($tablet-bp) {
-        margin-bottom: 50px;
+
+    @include breakpoint($second-bp) {
+        padding-bottom: 40px;
     }
+
+
 }
 
 .main_title{
@@ -34,8 +51,18 @@
     letter-spacing: -2.3px;
     text-transform: uppercase;
     padding: 0 0 33px 0;   
-        @include breakpoint($tablet-bp) {
+
+        @include breakpoint($second-bp) {
             max-width: 350px ; 
+            font-size: 50px;
+        }
+
+        @include breakpoint($phone-bp) {
+            font-size: 32px;
+        }
+
+        @include breakpoint($third-bp) {
+          font-size: 28px;
         }
 
 }
@@ -47,7 +74,7 @@
     font-weight: 300;
     line-height: 1.2;
 
-        @include breakpoint($tablet-bp) {
+        @include breakpoint($second-bp) {
             max-width: 350px ; 
         }
 }
@@ -62,22 +89,34 @@
     transition: 1s;
     padding: 16px 0 ;
 
+        @include breakpoint($third-bp) {
+            width: 100px;
+        }
+
         span {
             display: block;
             color: $green;
             font-weight: 700;
             font-size: 20px;
             transform: skew(35deg);
+            transition: 1s;
+
+                @include breakpoint($phone-bp) {
+                    font-size:  16px;
+                }
         }
 
         &:hover {
             background-color: $yellow;
             border: 2px solid $green;
             cursor: pointer;
+            transform: skew(0deg);
 
             
                 span {
                     color: $white;
+                    transform: none;
+
                 }
         }
 }
@@ -86,31 +125,35 @@
     position: relative;
     top: -6px;
     z-index: 2;
-        img {
-            display: block;
 
-            @include breakpoint($tablet-bp) {
-                max-width: 350px ;
-                max-height: 375px ;
-            }
+        @include breakpoint($phone-bp) {
+            display: none;
         }
- 
 }
+
+.cycle {
+    display: block;
+
+        @include breakpoint($tablet-bp) {
+            max-width: 400px;
+             max-height: 450px;
+    
+            }
+       }
+ 
+
 .shadow {
     display: block;
     position: absolute;
-    top: 0;
-    left: 40px;
+    top: -6px;
+    left: 20px;
 
-        img {
-            display: block;
-
-            @include breakpoint($tablet-bp) {
-                max-width: 350px ;
-                max-height: 375px ;
+        @include breakpoint($tablet-bp) {
+            max-width: 450px ;
+            max-height: 555px;
                 
             }
-        }
+        
 }
 
 .pagination {
@@ -134,9 +177,9 @@
             cursor: pointer;
             transition: .2s linear;
 
-            &:hover {
-                background-color: $white;
-                border: 1px solid $green;
-            }
+                &:hover {
+                    background-color: $white;
+                    border: 1px solid $green;
+                }
         }
 }
