@@ -1160,13 +1160,18 @@ footer {
   .mainfeature_title,
 .secondfeature_title {
     font-size: 26px;
-    max-width: 250px;
   }
 }
 
 @media screen and (max-width: 1300px) {
   .mainfeature_info {
     padding-left: 30px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .mainfeature_info {
+    max-width: 240px;
+    padding-left: 0;
   }
 }
 
@@ -1183,12 +1188,6 @@ footer {
   .mainfeature_text,
 .secondfeature_text {
     max-width: 400px;
-  }
-}
-@media screen and (max-width: 450px) {
-  .mainfeature_text,
-.secondfeature_text {
-    max-width: 300px;
   }
 }
 
@@ -1435,9 +1434,10 @@ footer {
     padding-right: 30px;
   }
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 450px) {
   .secondfeature_info {
-    padding: 0 0 0 30px;
+    padding-right: 0;
+    max-width: 240px;
   }
 }
 
