@@ -425,12 +425,6 @@ textarea {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 650px) {
-    .slider {
-        padding: 0 30px;
-    }
-}
-
 .main_info {
     padding: 56px 0 0 0;
 }
@@ -466,6 +460,12 @@ textarea {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .main_title {
+        font-size: 28px;
+    }
+}
+
 .main_text {
     max-width: 443px;
     font-size: 16px;
@@ -490,6 +490,12 @@ textarea {
     transform: skew(-35deg);
     transition: 1s;
     padding: 16px 0;
+}
+
+@media screen and (max-width: 450px) {
+    .main_button {
+        width: 100px;
+    }
 }
 
 .main_button span {
@@ -665,6 +671,12 @@ textarea {
     bottom: 0;
     -webkit-transform: skewY(-7deg);
     transform: skewY(-7deg);
+}
+
+@media screen and (max-width: 650px) {
+    .triangle6 {
+        display: none;
+    }
 }
 
 .triangle6::before {
@@ -856,6 +868,12 @@ header {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .service_iteam {
+        width: 200px;
+    }
+}
+
 .service_info {
     font-family: "Museo";
     text-align: left;
@@ -871,6 +889,13 @@ header {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .service_info {
+        width: 150px;
+        padding-top: 40px;
+    }
+}
+
 .service_title {
     font-size: 24px;
     font-weight: 700;
@@ -878,6 +903,12 @@ header {
     line-height: 1.4;
     letter-spacing: 0.5px;
     max-width: 227px;
+}
+
+@media screen and (max-width: 450px) {
+    .service_title {
+        font-size: 18px;
+    }
 }
 
 .service_text {
@@ -895,6 +926,13 @@ header {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .service_text {
+        font-size: 14px;
+        padding: 20px 0;
+    }
+}
+
 .service_button {
     display: -ms-flexbox;
     display: flex;
@@ -905,6 +943,12 @@ header {
     font-family: "Museo";
     font-size: 20px;
     font-weight: 700;
+}
+
+@media screen and (max-width: 450px) {
+    .service_button a {
+        font-size: 18px;
+    }
 }
 
 .service_button--black a {
@@ -1033,6 +1077,8 @@ footer {
     margin: 0 auto;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
     -ms-flex-direction: column;
     flex-direction: column;
     padding-bottom: 300px;
@@ -1060,6 +1106,12 @@ footer {
     padding: 0 4px 35px 0;
 }
 
+@media screen and (max-width: 450px) {
+    .produts_title {
+        font-size: 32px;
+    }
+}
+
 .produts_subtitle {
     font-size: 16px;
     font-weight: 300;
@@ -1071,6 +1123,12 @@ footer {
 @media screen and (max-width: 650px) {
     .produts_subtitle {
         max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .produts_subtitle {
+        font-size: 14px;
     }
 }
 
@@ -1106,6 +1164,12 @@ footer {
     z-index: 3;
 }
 
+@media screen and (max-width: 450px) {
+    .showcase_iteam {
+        width: 200px;
+    }
+}
+
 .showcase_iteam::after {
     content: "";
     position: relative;
@@ -1115,6 +1179,13 @@ footer {
     width: 325px;
     height: 251px;
     background-color: #dde6e8;
+}
+
+@media screen and (max-width: 450px) {
+    .showcase_iteam::after {
+        width: 176px;
+        height: 237px;
+    }
 }
 
 .showcase_image {
@@ -1127,6 +1198,12 @@ footer {
     bottom: 44px;
     margin: auto;
     z-index: 5;
+}
+
+@media screen and (max-width: 450px) {
+    .showcase_image {
+        width: 165px;
+    }
 }
 
 .showcase_info {
@@ -1187,15 +1264,29 @@ footer {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .mainfeature_title,
+.secondfeature_title {
+        font-size: 26px;
+    }
+}
+
 @media screen and (max-width: 1300px) {
     .mainfeature_info {
         padding-left: 30px;
     }
 }
 
+@media screen and (max-width: 450px) {
+    .mainfeature_info {
+        max-width: 240px;
+        padding-left: 0;
+    }
+}
+
 .mainfeature_text,
 .secondfeature_text {
-    width: 498px;
+    max-width: 498px;
     font-size: 16px;
     line-height: 19px;
     font-weight: 300;
@@ -1236,8 +1327,13 @@ footer {
 
 @media screen and (max-width: 650px) {
     .mainfeature_image img {
-        display: block;
         max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .mainfeature_image img {
+        max-width: 250px;
     }
 }
 
@@ -1253,6 +1349,13 @@ footer {
     border: 1px solid #212121;
     margin-left: 22px;
     transition: 1s;
+}
+
+@media screen and (max-width: 450px) {
+    .mainfeature_button,
+.secondfeature_button {
+        width: 100px;
+    }
 }
 
 .mainfeature_button:hover,
@@ -1274,6 +1377,14 @@ footer {
     transition: 1s;
 }
 
+@media screen and (max-width: 450px) {
+    .secondfeature_span,
+.mainfeature_span {
+        font-size: 16px;
+        padding: 15px 0;
+    }
+}
+
 .secondfeature_span:hover,
 .mainfeature_span:hover {
     -webkit-transform: skew(0);
@@ -1291,6 +1402,12 @@ footer {
     justify-content: space-evenly;
 }
 
+@media screen and (max-width: 650px) {
+    .newsletter {
+        padding: 0 40px;
+    }
+}
+
 .newsletter_tittle {
     color: #ffffff;
     font-family: "Museo";
@@ -1299,10 +1416,17 @@ footer {
     text-align: left;
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1300px) {
     .newsletter_tittle {
         text-align: center;
         padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .newsletter_tittle {
+        font-size: 24px;
+        padding-right: 0;
     }
 }
 
@@ -1313,6 +1437,12 @@ footer {
     padding-left: 4px;
 }
 
+@media screen and (max-width: 450px) {
+    .newsletter_tittle span {
+        font-size: 28px;
+    }
+}
+
 .newsletter_input {
     border: none;
     background-color: transparent;
@@ -1321,6 +1451,12 @@ footer {
     color: #a7a7a7;
     -webkit-transform: skew(34deg);
     transform: skew(34deg);
+}
+
+@media screen and (max-width: 450px) {
+    .newsletter_input {
+        width: 200px;
+    }
 }
 
 .newsletter_input::-webkit-input-placeholder {
@@ -1367,6 +1503,15 @@ footer {
 .newsletter_form {
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 650px) {
+    .newsletter_form {
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
 }
 
 .newsletter_btn {
@@ -1376,6 +1521,21 @@ footer {
     -webkit-transform: skew(-34deg);
     transform: skew(-34deg);
     transition: 0.2s;
+}
+
+@media screen and (max-width: 650px) {
+    .newsletter_btn {
+        padding: 15px 0;
+        width: 200px;
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .newsletter_btn {
+        width: 150px;
+    }
 }
 
 .newsletter_btn p {
@@ -1440,6 +1600,12 @@ footer {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .secondfeature_image img {
+        max-width: 250px;
+    }
+}
+
 .secondfeature_title {
     color: #ffffff;
 }
@@ -1451,6 +1617,13 @@ footer {
 @media screen and (max-width: 1300px) {
     .secondfeature_info {
         padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .secondfeature_info {
+        padding-right: 0;
+        max-width: 240px;
     }
 }
 
@@ -1515,4 +1688,10 @@ footer {
 .footer_right li:not(:first-child) {
     color: #969696;
     margin-bottom: 20px;
+}
+
+@media screen and (max-width: 650px) {
+    .footer_list {
+        padding: 0 10px;
+    }
 }

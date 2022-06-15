@@ -10,6 +10,10 @@
     max-width: 325px;
     color: $white;
     padding: 7px 0 95px 0;
+
+        @include breakpoint($third-bp) {
+           max-width: 240px;
+        }
 }
 
 .footer_text {

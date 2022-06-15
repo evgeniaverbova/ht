@@ -1458,6 +1458,11 @@ footer {
   color: #ffffff;
   padding: 7px 0 95px 0;
 }
+@media screen and (max-width: 450px) {
+  .footer_info {
+    max-width: 240px;
+  }
+}
 
 .footer_text {
   font-size: 15px;
